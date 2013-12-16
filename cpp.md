@@ -33,8 +33,8 @@ Premake scripts.
 
 1. Install Premake 4.4-beta4+ from http://industriousone.com/premake/download.
 2. `$ git clone https://github.com/komiga/precore.git` to somewhere sane.
-3. Add `PRECORE_ROOT` to your `.bashrc` pointing to precore's root. This is
-   required by the Premake scripts to import precore.
+3. Add the variable `PRECORE_ROOT` to your `.bashrc` pointing to precore's root.
+   This is required by the Premake scripts to import precore.
 
 Next you should install Clang 3.3+ and libc++. The current stable Clang should
 do, but the latest SVN revision (read: unstable) of libc++ is preferred. If
