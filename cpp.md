@@ -26,7 +26,7 @@ to use libc++ -- especially on Linux.
 
 ## Toolchain setup
 
-All C++ projects use Premake 4.4-beta4 with precore for the build system.
+All C++ projects use Premake 4.4-beta4+ with precore for the build system.
 Premake generates a platform-specific makefile or project file (VS, Xcode) from
 a Premake script, which uses Lua. precore is a set of extensions to simplify
 Premake scripts.
