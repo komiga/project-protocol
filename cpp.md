@@ -31,7 +31,7 @@ Premake generates a platform-specific makefile or project file (VS, Xcode) from
 a Premake script, which uses Lua. precore is a set of extensions to simplify
 Premake scripts.
 
-1. Install Premake 4.4-beta4+ from http://industriousone.com/premake/download.
+1. Install Premake 4.4-beta5+ from http://industriousone.com/premake/download.
 2. `$ git clone https://github.com/komiga/precore.git` to somewhere sane.
 3. Add the variable `PRECORE_ROOT` to your `.bashrc` pointing to precore's root.
    This is required by the Premake scripts to import precore.
