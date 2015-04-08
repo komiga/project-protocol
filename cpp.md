@@ -29,14 +29,15 @@ to use libc++ -- especially on Linux.
 All C++ projects use Premake 4.4-beta5+ with precore for the build system.
 Premake generates a platform-specific makefile or project file (VS, Xcode) from
 a Premake script, which uses Lua. precore is a set of extensions to simplify
-Premake scripts.
+Premake scripts. Projects do not support Premake 5.x (which greatly changes the
+interface and is still in alpha).
 
 1. Install Premake 4.4-beta5+ from http://industriousone.com/premake/download.
-2. `$ git clone https://github.com/komiga/precore.git` to somewhere sane.
+2. `$ git clone https://github.com/komiga/precore.git` somewhere stationary.
 3. Add the variable `PRECORE_ROOT` to your `.bashrc` pointing to precore's root.
    This is required by the Premake scripts to import precore.
 
-Next you should install Clang 3.3+ and libc++. The current stable Clang should
+Next you should install Clang 3.6+ and libc++. The current stable Clang should
 do, but the latest SVN revision (read: unstable) of libc++ is preferred. If
 you're on Linux, see "Build on Linux using …" here: http://libcxx.llvm.org.
 
