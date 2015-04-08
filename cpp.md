@@ -24,6 +24,9 @@ making the constexpr artwork configurably constexpr.
 libstdc++ may be supported for some projects that require Clang, but it's best
 to use libc++ -- especially on Linux.
 
+**1**: This might not be accurate to the latest GCC and libstdc++. If a project
+builds with a GCC/libstdc++ version greater than 4.7.3, let plash know.
+
 ## Toolchain setup
 
 All C++ projects use Premake 4.4-beta5+ with precore for the build system.
@@ -67,7 +70,20 @@ The previous command uses `opt-clang` from precore. C++11 projects will also
 use `c++11-core` from precore (implicitly) to specify `-std=c++11` for Linux
 and Mac OS.
 
-## Footnotes
+## Importing
 
-1: This might not be accurate to the latest GCC and libstdc++. If a project
-builds with a GCC/libstdc++ version greater than 4.7.3, let plash know.
+There should be a `build.lua` file in the root of every project. It wires up the
+precore configs for the project's dependencies and whatnot. It is effectively
+the entire build configuration of the project, as well as init-configs for the
+Premake projects in case you want to build them locally.
+
+Dependencies that use the `build.lua` script can be imported with
+`precore.import()` and linked to with the precore config `<project_name>.dep`.
+
+These assume the dependency is already compiled (into `<PROJECT_NAME>/build/`).
+The import path is not modified unless the `<project_name>.projects` config is
+executed.
+
+`build.lua` always relies on a global `DEP_PATH` substitution defined to a
+directory containing directories of all the expected libraries. These should
+just be symlinks to plashian project roots, or builds of libraries otherwise.
