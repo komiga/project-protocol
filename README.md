@@ -1,7 +1,7 @@
 
 # Project protocols
 
-General documentation and toolchain setup for komiga/plash's projects.
+General documentation and toolchain setup for my projects.
 
 ## C++
 

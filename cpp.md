@@ -11,21 +11,21 @@ you'll need the newest version (projects are on 1.8.9.1). Use the
 
 ## Support
 
-As far as plash knows, none of his projects support Windows/MSVC. This is
-primarily due to Microsoft's lack of C++11 support.
+As far as I know, none of my projects support Windows/MSVC. This is (as of
+writing) primarily due to Microsoft's lack of C++11 support.
 
 duct++ is the one of the few projects that supports GCC and libstdc++.¹ Clang
 is required for almost everything else due to either libstdc++'s lack of C++11
 support or ceformat's human rights violations. The latter concern may be more
 easily addressed when C++1y lands with relaxed constexpr constraints, but
-sufficient cries of agony may sway plash into making ceformat support GCC by
+sufficient cries of agony may sway me into making ceformat support GCC by
 making the constexpr artwork configurably constexpr.
 
 libstdc++ may be supported for some projects that require Clang, but it's best
 to use libc++ -- especially on Linux.
 
 **1**: This might not be accurate to the latest GCC and libstdc++. If a project
-builds with a GCC/libstdc++ version greater than 4.7.3, let plash know.
+builds with a GCC/libstdc++ version greater than 4.7.3, let me know.
 
 ## Toolchain setup
 
@@ -86,4 +86,4 @@ executed.
 
 `build.lua` always relies on a global `DEP_PATH` substitution defined to a
 directory containing directories of all the expected libraries. These should
-just be symlinks to plashian project roots, or builds of libraries otherwise.
+just be symlinks to project roots, or builds of libraries otherwise.
