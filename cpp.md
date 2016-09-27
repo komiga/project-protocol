@@ -50,10 +50,10 @@ Once everything is working properly, the build steps are:
 2. `$ make [config=...]` or compile with your IDE.
 
 Libraries will likely have build configurations for debug/release and
-architecture. With GNU make, an x86_64 debug build would be
+architecture. With GNU Make, an x86_64 debug build would be
 `$ make config=debug64`. The native-arch debug config should be the default.
 
-If you want to compile with Clang using GNU make, it's a bit hacky because
+If you want to compile with Clang using GNU Make, it's a bit hacky because
 Premake doesn't currently support it. You'll have to first:
 
 ```
